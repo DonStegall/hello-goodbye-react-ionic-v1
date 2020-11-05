@@ -19,9 +19,9 @@ const Home: React.FC = () => {
             <IonTitle size="large">Hello Goodbye</IonTitle>
           </IonToolbar>
         </IonHeader>
-        {/* <HelloGoodbyeComponent /> */}
         <HelloGoodbyeFunctionComponent />
-      </IonContent>
+        {/* <HelloGoodbyeComponent /> */}
+        </IonContent>
     </IonPage>
   );
 };
