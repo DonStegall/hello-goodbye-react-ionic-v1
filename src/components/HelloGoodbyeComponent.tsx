@@ -4,37 +4,41 @@ import './HelloGoodbye.css';
 import logo from '../assets/logo.svg'; // move to a better location
 
 class HelloGoodbyeComponent extends Component<any, any> {
+
   constructor(props: any){
-    super(props);
-    this.state = {value: ''};
+    super(props)
+    ;
+    this.state = {
+      textInput: ''
+    };
   }
 
   handleChange(event:any) {
-    this.setState({value: event.target.value});
+    this.setState({textInput: event.target.textInput});
   }
 
   handleClickHello = () => {
-    this.setState({value: 'Hello'});
+    this.setState({textInput: 'Hello'});
   }
 
   handleClickGoodbye = () => {
-    this.setState({value: 'Goodbye'});
+    this.setState({textInput: 'Goodbye'});
   }
 
   handleClickUpperCase = () => {
-    this.setState({value: this.state.value.toUpperCase()});
+    this.setState({textInput: this.state.textInput.toUpperCase()});
   }
 
   handleClickLowerCase = () => {
-    this.setState({value: this.state.value.toLowerCase()});
+    this.setState({textInput: this.state.textInput.toLowerCase()});
   }
 
   handleClickMessage = () => {
-    alert(this.state.value);
+    alert(this.state.textInput);
   }
 
   handleClickClear = () => {
-    this.setState({value: ''});
+    this.setState({textInput: ''});
   }
 
   render() {
@@ -48,7 +52,7 @@ class HelloGoodbyeComponent extends Component<any, any> {
             <p>
               <IonLabel>
                 Input:<br></br>
-                <input type="text" value={this.state.value} onChange={this.handleChange.bind(this)} />
+                <input type="text" value={this.state.textInput} onChange={this.handleChange.bind(this)} />
               </IonLabel>
             </p>
 
@@ -61,19 +65,19 @@ class HelloGoodbyeComponent extends Component<any, any> {
             </p>
 
             <p>
-              <IonButton disabled={!this.state.value}  onClick={this.handleClickUpperCase}>Upper Case</IonButton>
+              <IonButton disabled={!this.state.textInput}  onClick={this.handleClickUpperCase}>Upper Case</IonButton>
             </p>
 
             <p>
-              <IonButton disabled={!this.state.value}  onClick={this.handleClickLowerCase}>Lower Case</IonButton>
+              <IonButton disabled={!this.state.textInput}  onClick={this.handleClickLowerCase}>Lower Case</IonButton>
             </p>
 
             <p>
-              <IonButton disabled={!this.state.value} onClick={this.handleClickMessage}>Show Input Message</IonButton>
+              <IonButton disabled={!this.state.textInput} onClick={this.handleClickMessage}>Show Input Message</IonButton>
             </p>
 
             <p>
-              <IonButton disabled={!this.state.value} onClick={this.handleClickClear}>Clear Input Message</IonButton>
+              <IonButton disabled={!this.state.textInput} onClick={this.handleClickClear}>Clear Input Message</IonButton>
             </p>
 
         </div>
