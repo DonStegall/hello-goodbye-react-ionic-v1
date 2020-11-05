@@ -19,7 +19,7 @@ const Home: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <HelloGoodbyeComponent />
-        {/* <HelloGoodbyeContainer textInput={"Hello Donald"} /> */}
+        {/* <HelloGoodbyeFunctionComponent textInput={"Hello Don"} /> */}
       </IonContent>
     </IonPage>
   );
