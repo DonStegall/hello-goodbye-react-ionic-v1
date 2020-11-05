@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { ChangeEvent } from 'react';
 // import logo from './logo.svg';
 import './HelloGoodbye.css';
 import { IonButton, IonInput, IonLabel } from '@ionic/react';
@@ -12,8 +12,14 @@ interface ContainerProps {
 
 const HelloGoodbyeFunctionComponent: React.FC<ContainerProps> = ({textInput}) => {
 
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    // this.setState({value: event.target.value});
+    // alert(event.target.value);
+    textInput = event.target.value;
+  }
+
   const handleClickMessage = () => {
-    alert("fix this ... event.target.value");
+    alert(textInput);
   }
 
   return (
@@ -24,9 +30,16 @@ const HelloGoodbyeFunctionComponent: React.FC<ContainerProps> = ({textInput}) =>
       <p>{textInput}</p>
 
       <p>
-        <button value={textInput} onClick={handleClickMessage}>Show Input Message</button>
+          <label>
+            Input:<br></br>
+            <input type="text" onChange={handleChange}></input>
+          </label>
+        </p>
+
+      <p>
+        <IonButton disabled={!textInput} onClick={handleClickMessage}>Show Input Message</IonButton>
       </p>
-      
+
     </div>
   );
 };
