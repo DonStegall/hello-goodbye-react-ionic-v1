@@ -50,7 +50,7 @@ import './HelloGoodbye.css';
 class HelloGoodbyeComponent extends Component<any, any> {
   constructor(props: any){
     super(props);
-    this.state = {value: 'Initialized temporarily'};
+    this.state = {value: ''};
   }
 
   handleChange(event:any) {
@@ -64,7 +64,8 @@ class HelloGoodbyeComponent extends Component<any, any> {
   render() {
       return (
           <div className="container">
-            <strong>React logo goes here</strong>
+
+            <strong>React logo will go here</strong>
 
             <p>
               <label>
@@ -74,9 +75,8 @@ class HelloGoodbyeComponent extends Component<any, any> {
             </p>
 
             <p>
-              <button onClick={this.handleClickMessage}>Show Input Message</button>
+              <button disabled={!this.state.value} onClick={this.handleClickMessage}>Show Input Message</button>
             </p>
-
 
         </div>
       );
@@ -85,3 +85,4 @@ class HelloGoodbyeComponent extends Component<any, any> {
 }
 
 export default HelloGoodbyeComponent;
+
