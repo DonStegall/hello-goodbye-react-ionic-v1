@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useState } from 'react';
-// import logo from './logo.svg';
-import './HelloGoodbye.css';
 import { IonButton, IonInput, IonLabel } from '@ionic/react';
+import './HelloGoodbye.css';
+import logo from '../assets/logo.svg'; // move to a better location
 
 
 interface ContainerProps {
@@ -23,9 +23,9 @@ const HelloGoodbyeFunctionComponent: React.FC<ContainerProps> = () => {
   return (
     <div className="container">
 
-      <strong>Hello Goodbye React Ionic V1</strong>
-
-      <p>{value}</p>
+      <div>
+        <img src={logo} className="App-logo" alt="logo" />
+      </div>
 
       <p>
           <label>

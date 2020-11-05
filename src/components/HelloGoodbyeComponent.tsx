@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from '../assets/logo.svg'; // move to a better location
-import './HelloGoodbye.css';
 import { IonButton, IonInput, IonLabel } from '@ionic/react';
+import './HelloGoodbye.css';
+import logo from '../assets/logo.svg'; // move to a better location
 
 class HelloGoodbyeComponent extends Component<any, any> {
   constructor(props: any){
