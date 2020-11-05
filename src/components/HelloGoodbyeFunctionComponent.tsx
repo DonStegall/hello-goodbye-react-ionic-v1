@@ -84,7 +84,7 @@ const HelloGoodbyeFunctionComponent: React.FC<ContainerProps> = () => {
           isOpen={showInput}
           onDidDismiss={() => setShowInput(false)}
           header={'Input Contents'}
-          subHeader={'Value of Input field is:'}
+          subHeader={'value of Input field is:'}
           message={value}
           buttons={['OK']}
           />
