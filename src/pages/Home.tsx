@@ -1,6 +1,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
-import ExploreContainer from '../components/ExploreContainer';
+// import ExploreContainer from '../components/ExploreContainer';
+import HelloGoodbyeComponent from '../components/HelloGoodbyeComponent';
 import './Home.css';
 
 const Home: React.FC = () => {
@@ -8,16 +9,17 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Blank</IonTitle>
+          <IonTitle>Hello Goodbye</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
+            <IonTitle size="large">Hello Goodbye</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer />
+        <HelloGoodbyeComponent />
+        {/* <HelloGoodbyeContainer textInput={"Hello Donald"} /> */}
       </IonContent>
     </IonPage>
   );
