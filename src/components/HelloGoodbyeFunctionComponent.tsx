@@ -1,5 +1,6 @@
 import React, { ChangeEvent, useState } from 'react';
-import { IonButton, IonInput, IonLabel } from '@ionic/react';
+import { IonButton, IonInput, IonLabel, IonAlert
+ } from '@ionic/react';
 import './HelloGoodbye.css';
 import logo from '../assets/logo.svg'; // move to a better location
 
@@ -11,6 +12,7 @@ interface ContainerProps {
 const HelloGoodbyeFunctionComponent: React.FC<ContainerProps> = () => {
 
   const [value, setValue] = useState('');
+  const [showInput, setShowInput] = useState(false);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
@@ -71,12 +73,21 @@ const HelloGoodbyeFunctionComponent: React.FC<ContainerProps> = () => {
       </p>
 
       <p>
-        <IonButton disabled={!value} onClick={handleClickMessage}>Show Input Message</IonButton>
+        <IonButton disabled={!value} onClick={() => setShowInput(true)} expand="block">Show Input Message</IonButton>
       </p>
 
       <p>
         <IonButton disabled={!value} onClick={handleClickClear}>Clear Input Message</IonButton>
       </p>
+
+      <IonAlert
+          isOpen={showInput}
+          onDidDismiss={() => setShowInput(false)}
+          header={'Input Contents'}
+          subHeader={'Value of Input field is:'}
+          message={value}
+          buttons={['OK']}
+          />
 
     </div>
   );
