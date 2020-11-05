@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
+import logo from '../assets/logo.svg'; // move to a better location
 import './HelloGoodbye.css';
 import { IonButton, IonInput, IonLabel } from '@ionic/react';
 
@@ -41,7 +41,9 @@ class HelloGoodbyeComponent extends Component<any, any> {
       return (
           <div className="container">
 
-            <strong>React logo will go here</strong>
+            <div>
+              <img src={logo} className="App-logo" alt="logo" />
+            </div>
 
             <p>
               <IonLabel>
