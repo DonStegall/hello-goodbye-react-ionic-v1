@@ -58,8 +58,28 @@ class HelloGoodbyeComponent extends Component<any, any> {
     this.setState({value: event.target.value});
   }
 
+  handleClickHello = () => {
+    this.setState({value: 'Hello'});
+  }
+
+  handleClickGoodbye = () => {
+    this.setState({value: 'Goodbye'});
+  }
+
   handleClickMessage = () => {
     alert(this.state.value);
+  }
+
+  handleClickUpperCase = () => {
+    this.setState({value: this.state.value.toUpperCase()});
+  }
+
+  handleClickLowerCase = () => {
+    this.setState({value: this.state.value.toLowerCase()});
+  }
+
+  handleClickClear = () => {
+    this.setState({value: ''});
   }
 
   render() {
@@ -76,7 +96,27 @@ class HelloGoodbyeComponent extends Component<any, any> {
             </p>
 
             <p>
+              <IonButton onClick={this.handleClickHello}>Hello</IonButton>
+            </p>
+
+            <p>
+              <IonButton onClick={this.handleClickGoodbye}>Goodbye</IonButton>
+            </p>
+
+            <p>
+              <IonButton disabled={!this.state.value}  onClick={this.handleClickUpperCase}>Upper Case</IonButton>
+            </p>
+
+            <p>
+              <IonButton disabled={!this.state.value}  onClick={this.handleClickLowerCase}>Lower Case</IonButton>
+            </p>
+
+            <p>
               <IonButton disabled={!this.state.value} onClick={this.handleClickMessage}>Show Input Message</IonButton>
+            </p>
+
+            <p>
+              <IonButton disabled={!this.state.value} onClick={this.handleClickClear}>Clear Input Message</IonButton>
             </p>
 
         </div>
