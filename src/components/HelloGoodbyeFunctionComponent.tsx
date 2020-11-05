@@ -16,6 +16,10 @@ const HelloGoodbyeFunctionComponent: React.FC<ContainerProps> = () => {
     setValue(event.target.value);
   }
 
+  const handleClickHello = () => {
+    setValue('Hello');
+  }
+
   const handleClickMessage = () => {
     alert(value);
   }
@@ -32,6 +36,10 @@ const HelloGoodbyeFunctionComponent: React.FC<ContainerProps> = () => {
             Input:<br></br>
             <input type="text" value={value} onChange={handleChange}></input>
           </label>
+        </p>
+
+        <p>
+          <IonButton onClick={handleClickHello}>Hello</IonButton>
         </p>
 
       <p>
