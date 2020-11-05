@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './HelloGoodbye.css';
+import { IonButton, IonInput, IonLabel } from '@ionic/react';
 
 
 /// problem with this FC is the event handler and state / props
@@ -68,14 +69,14 @@ class HelloGoodbyeComponent extends Component<any, any> {
             <strong>React logo will go here</strong>
 
             <p>
-              <label>
+              <IonLabel>
                 Input:<br></br>
                 <input type="text" value={this.state.value} onChange={this.handleChange.bind(this)} />
-              </label>
+              </IonLabel>
             </p>
 
             <p>
-              <button disabled={!this.state.value} onClick={this.handleClickMessage}>Show Input Message</button>
+              <IonButton disabled={!this.state.value} onClick={this.handleClickMessage}>Show Input Message</IonButton>
             </p>
 
         </div>
