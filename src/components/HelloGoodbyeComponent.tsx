@@ -21,16 +21,16 @@ class HelloGoodbyeComponent extends Component<any, any> {
     this.setState({value: 'Goodbye'});
   }
 
-  handleClickMessage = () => {
-    alert(this.state.value);
-  }
-
   handleClickUpperCase = () => {
     this.setState({value: this.state.value.toUpperCase()});
   }
 
   handleClickLowerCase = () => {
     this.setState({value: this.state.value.toLowerCase()});
+  }
+
+  handleClickMessage = () => {
+    alert(this.state.value);
   }
 
   handleClickClear = () => {
