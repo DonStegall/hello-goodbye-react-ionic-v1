@@ -3,51 +3,6 @@ import React, { Component } from 'react';
 import './HelloGoodbye.css';
 import { IonButton, IonInput, IonLabel } from '@ionic/react';
 
-
-/// problem with this FC is the event handler and state / props
-
-// interface ContainerProps {
-//   textInput : string;
-// }
-
-// const HelloGoodbyeContainer: React.FC<ContainerProps> = ({textInput}) => {
-
-//   const handleClickMessage = MouseEvent => {
-//     alert(event.target.value);
-//   }
-
-//   return (
-//     <div className="container">
-//       <strong>Hello Goodbye React Ionic V1</strong>
-//       <p>{textInput}</p>
-//       <p>
-//           <button value={textInput} onClick={handleClickMessage}>Show Input Message</button>
-//         </p>
-//     </div>
-//   );
-// };
-
-// export default HelloGoodbyeContainer;
-
-
-// class HelloGoodbyeContainer extends Component<any, any> {
-//   constructor(props: any){
-//     super(props);
-//     this.state = {value: ''};
-// }
-
-//   public render() {
-//       return (
-//           <div>
-//             <strong>Hello Goodbye React Ionic V1 - Component</strong>
-//           </div>
-//       );
-//   }
-// }
-
-// export default HelloGoodbyeContainer;
-
-
 class HelloGoodbyeComponent extends Component<any, any> {
   constructor(props: any){
     super(props);
