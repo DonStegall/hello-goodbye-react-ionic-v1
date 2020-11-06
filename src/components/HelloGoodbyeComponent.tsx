@@ -6,8 +6,8 @@ import logo from '../assets/logo.svg'; // move to a better location
 class HelloGoodbyeComponent extends Component<any, any> {
 
   constructor(props: any){
-    super(props)
-    ;
+    super(props);
+    
     this.state = {
       textInput: ''
     };
