@@ -49,6 +49,10 @@ const HelloGoodbyeFunctionComponent: React.FC<ContainerProps> = () => {
       </div>
 
       <p>
+        HelloGoodbyeFunctionComponent
+      </p>
+
+      <p>
         <IonLabel>
           Input:<br></br>
           <input type="text" value={textInput} onChange={handleChange}></input>
