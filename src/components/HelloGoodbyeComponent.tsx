@@ -14,6 +14,8 @@ class HelloGoodbyeComponent extends Component<any, any> {
     };
   }
 
+  title = "HelloGoodbyeComponent";
+
   handleChange(event:any) {
     this.setState({textInput: event.target.textInput});
   }
@@ -51,7 +53,7 @@ class HelloGoodbyeComponent extends Component<any, any> {
             </div>
 
             <p>
-              HelloGoodbyeComponent
+              {this.title}
             </p>
 
             <p>

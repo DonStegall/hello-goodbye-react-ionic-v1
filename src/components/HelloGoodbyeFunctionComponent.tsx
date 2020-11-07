@@ -10,6 +10,8 @@ interface ContainerProps {
 
 const HelloGoodbyeFunctionComponent: React.FC<ContainerProps> = () => {
 
+  const title = 'HelloGoodbyeFunctionComponent';
+
   const [textInput, setTextInput] = useState('');
   const [showInput, setShowInput] = useState(false);
 
@@ -49,7 +51,7 @@ const HelloGoodbyeFunctionComponent: React.FC<ContainerProps> = () => {
       </div>
 
       <p>
-        HelloGoodbyeFunctionComponent
+        {title}
       </p>
 
       <p>
