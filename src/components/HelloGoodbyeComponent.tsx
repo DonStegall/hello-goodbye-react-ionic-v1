@@ -72,15 +72,15 @@ class HelloGoodbyeComponent extends Component<any, any> {
             </p>
 
             <p>
-              <IonButton disabled={!this.state.textInput}  onClick={this.handleClickUpperCase}>Upper Case</IonButton>
+              <IonButton disabled={!this.state.textInput} onClick={this.handleClickUpperCase}>Upper Case</IonButton>
             </p>
 
             <p>
-              <IonButton disabled={!this.state.textInput}  onClick={this.handleClickLowerCase}>Lower Case</IonButton>
+              <IonButton disabled={!this.state.textInput} onClick={this.handleClickLowerCase}>Lower Case</IonButton>
             </p>
 
             <p>
-              <IonButton disabled={!this.state.textInput}  onClick={() => this.setState({showInput: true})} expand="block">Show Input Message</IonButton>
+              <IonButton disabled={!this.state.textInput} onClick={() => this.setState({showInput: true})}>Show Input Message</IonButton>
             </p>
 
             <p>

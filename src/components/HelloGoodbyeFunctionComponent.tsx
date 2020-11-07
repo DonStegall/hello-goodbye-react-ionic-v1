@@ -74,7 +74,7 @@ const HelloGoodbyeFunctionComponent: React.FC = () => {
       </p>
 
       <p>
-        <IonButton disabled={!textInput} onClick={() => setShowInput(true)} expand="block">Show Input Message</IonButton>
+        <IonButton disabled={!textInput} onClick={() => setShowInput(true)} >Show Input Message</IonButton>
       </p>
 
       <p>
