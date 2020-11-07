@@ -10,13 +10,13 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Hello Goodbye</IonTitle>
+          <IonTitle>Hello Goodbye React Ionic V1</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Hello Goodbye</IonTitle>
+            <IonTitle size="large">Hello Goodbye React Ionic V1</IonTitle>
           </IonToolbar>
         </IonHeader>
         <HelloGoodbyeFunctionComponent />
