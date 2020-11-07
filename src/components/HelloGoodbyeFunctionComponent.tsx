@@ -4,11 +4,7 @@ import './HelloGoodbye.css';
 import logo from '../assets/logo.svg'; // move to a better location
 
 
-interface ContainerProps {
-}
-
-
-const HelloGoodbyeFunctionComponent: React.FC<ContainerProps> = () => {
+const HelloGoodbyeFunctionComponent: React.FC = () => {
 
   const title = 'HelloGoodbyeFunctionComponent';
 
