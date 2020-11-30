@@ -32,7 +32,7 @@ const HelloGoodbyeFunctionComponent: React.FC = () => {
   }
 
   const handleClickMessage = () => {
-    alert(textInput);
+    setShowInput(true)
   }
 
   const handleClickClear = () => {
@@ -74,7 +74,7 @@ const HelloGoodbyeFunctionComponent: React.FC = () => {
       </p>
 
       <p>
-        <IonButton disabled={!textInput} onClick={() => setShowInput(true)} >Show Input Message</IonButton>
+        <IonButton disabled={!textInput} onClick={handleClickMessage} >Show Input Message</IonButton>
       </p>
 
       <p>
